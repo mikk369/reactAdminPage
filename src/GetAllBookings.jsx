@@ -33,6 +33,14 @@ function GetAllBookings() {
     );
   }
 
+    const calculateDays = (startDate, endDate) => {
+      const start = new Date(startDate);
+      const end = new Date(endDate);
+      const timeDifference = end - start;
+      const daysDifference = timeDifference / (1000 * 3600 * 24); // Convert milliseconds to days
+      return daysDifference + 1; // Include the start day
+    };
+
   return (
     <div className="bookingPage">
       <h2>Recent Bookings</h2>
@@ -42,6 +50,7 @@ function GetAllBookings() {
             <th>ID</th>
             <th>Start Date</th>
             <th>End Date</th>
+            <th>Days</th>
             <th>Email</th>
           </tr>
         </thead>
@@ -51,6 +60,7 @@ function GetAllBookings() {
               <td>{booking.id}</td>
               <td>{booking.startdate}</td>
               <td>{booking.enddate}</td>
+              <td>{calculateDays(booking.startdate, booking.enddate)}</td>
               <td>{booking.email}</td>
             </tr>
           ))}
