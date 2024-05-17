@@ -5,3 +5,36 @@
   text-align: center;
 }
 
+.bookingPage {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.bookings-table th, .bookings-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.bookings-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading {
+  font-size: 24px;
+  font-weight: bold;
+}

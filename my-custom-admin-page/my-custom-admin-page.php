@@ -36,4 +36,11 @@ function enqueue_custom_admin_page_scripts($hook_suffix) {
         filemtime(plugin_dir_path(__FILE__) . 'index.js'),
         true
     );
+
+    wp_enqueue_style(
+        'custom-admin-page-react-app',
+        plugin_dir_url(__FILE__) . 'App.css',
+        array(),
+        filemtime(plugin_dir_path(__FILE__) . 'App.css')
+    );
 }
