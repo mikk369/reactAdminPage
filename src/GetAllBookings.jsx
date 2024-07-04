@@ -11,7 +11,7 @@ function GetAllBookings() {
       try {
         // Make a GET request to the WooCommerce product endpoint
         const response = await axios.get(
-          `https://webcodes.ee/test/wp-json/bookings/v1/bookings`
+          `https://testwordpress.webcodes.ee/wp-json/bookings/v1/bookings`
         );
         // Set the retrieved product in the state
         setBooking(response.data);
