@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: my custom admin page    
+Plugin Name: Broneeringute leht    
 Version: 1.0
 Author: Mike
 */
