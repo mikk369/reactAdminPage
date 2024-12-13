@@ -1,21 +1,28 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .bookingPage {
   font-family: Arial, sans-serif;
   padding: 20px;
+  width: 100%;
+  overflow-x: auto
 }
 
 .bookings-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: auto;
   margin-top: 20px;
+  /* Ensures the table doesn't shrink too much */
+  min-width: 1500px;
 }
-
+/* DATE WRAPPER  */
+.table-date-box {
+ width: 115px;
+}
 .bookings-table th, .bookings-table td {
   padding: 12px 15px;
   border: 1px solid #ddd;
@@ -41,4 +48,109 @@
 .loading {
   font-size: 24px;
   font-weight: bold;
+}
+
+/* /////BUTTONS\\\\ */
+/* Style for Accept and Deny buttons */
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+button {
+  font-size: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+  display: flex;
+  padding: 5px 10px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Accept button style */
+button.accept {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+button.accept:hover {
+  background-color: #3c8f40;
+}
+
+/* Update button  */
+button.update {
+  background-color:  #FFC107;
+  color: white;
+}
+button.update:hover {
+  background-color:  #ecb204;
+  color: white;
+}
+
+/* Deny button style */
+button.deny {
+  background-color: orangered; /* Red */
+  color: white;
+}
+
+button.deny:hover {
+  background-color: rgb(226, 62, 3);
+}
+
+/* /// PAGINATION \\\  */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  margin-top: 20px;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between label and dropdown */
+}
+
+.pagination-controls label {
+  font-size: 16px;
+}
+
+.pagination-controls select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  gap: 5px; /* Adds space between buttons */
+  flex-wrap: wrap; /* Prevents buttons from overlapping on smaller screens */
+}
+
+.page-button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.page-button:hover {
+  background-color: #0056b3;
+  color: #fff;
 }
